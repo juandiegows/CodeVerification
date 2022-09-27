@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.text.InputType
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.view.View
@@ -17,9 +18,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        lockKeyboard()
         getTextBoxList()[0].requestFocus()
         binding.btnDelete.setOnClickListener {
             delete()
+        }
+    }
+
+    fun lockKeyboard(){
+        getTextBoxList().forEach {
+            it.inputType = InputType.TYPE_NULL
         }
     }
     // obtiene n
