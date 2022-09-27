@@ -2,6 +2,10 @@ package com.example.codeverification
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -18,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             delete()
         }
     }
-
+    // obtiene n
     fun getTextBoxList(): java.util.ArrayList<EditText> = with(binding) {
         return@with arrayListOf(txtNum1, txtNum2, txtNum3, txtNum4)
     }
@@ -49,6 +53,11 @@ class MainActivity : AppCompatActivity() {
                 it.hasFocus()
             }.first()
             text.setText(view.text.toString())
+            text.transformationMethod = HideReturnsTransformationMethod.getInstance()
+            Handler(Looper.myLooper()!!).postDelayed({
+                text.transformationMethod = PasswordTransformationMethod.getInstance()
+            },1000)
+
             var index = getTextBoxList().indexOf(text)
             if (index < getTextBoxList().size - 1) {
                 index++;

@@ -203,7 +203,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:password="true"
+            android:textAlignment="center"
+            android:textSize="34sp" />
 
         <EditText
             android:id="@+id/txtNum2"
@@ -211,7 +214,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:password="true"
+            android:textAlignment="center"
+            android:textSize="34sp" />
 
         <EditText
             android:id="@+id/txtNum3"
@@ -219,7 +225,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:password="true"
+            android:textAlignment="center"
+            android:textSize="34sp" />
 
         <EditText
             android:id="@+id/txtNum4"
@@ -227,7 +236,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:password="true"
+            android:textAlignment="center"
+            android:textSize="34sp" />
 
     </LinearLayout>
 
