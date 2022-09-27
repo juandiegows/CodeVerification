@@ -27,8 +27,16 @@ class MainActivity : AppCompatActivity() {
         var text: EditText = getTextBoxList().filter {
             it.hasFocus()
         }.first()
-        text.setText("")
+
         var index = getTextBoxList().indexOf(text)
+        if (!text.text.isNullOrEmpty()) {
+            text.setText("")
+        }else{
+            if (index > 0) {
+                index--;
+                getTextBoxList().get(index).setText("")
+            }
+        }
         if (index > 0) {
             index--;
             getTextBoxList().get(index).requestFocus()
