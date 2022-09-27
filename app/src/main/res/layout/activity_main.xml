@@ -91,11 +91,15 @@
                 android:id="@+id/btnDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:background="@drawable/fondo_boton"
-                android:text="DEl"
+                android:foregroundGravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:paddingStart="40dp"
                 android:textColor="#000000"
-                android:theme="@style/Theme.mybuttom" />
+                android:theme="@style/Theme.mybuttom"
+                app:icon="@drawable/ic_baseline_keyboard_return_24" />
         </LinearLayout>
 
         <LinearLayout
