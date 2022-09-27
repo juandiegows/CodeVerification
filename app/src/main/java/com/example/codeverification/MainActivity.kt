@@ -18,8 +18,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //bloquemos el teclado
         lockKeyboard()
+        //le damos focus al primer editText
         getTextBoxList()[0].requestFocus()
+        //agregamos el evento de eliminar
         binding.btnDelete.setOnClickListener {
             delete()
         }
